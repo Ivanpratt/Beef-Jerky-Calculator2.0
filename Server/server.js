@@ -9,9 +9,11 @@ const objectArray = []
 app.use(express.json())
 app.use(cors());
 
+//app.use(express.static(path.join(__dirname, "../Public")))
+
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '/Public/Index.html'))
+    res.sendFile(path.join(__dirname, '../Public/Index.html'))
 })
 
 app.post('/api/data', (req, res) => {
